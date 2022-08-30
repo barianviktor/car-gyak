@@ -1,0 +1,52 @@
+{
+  "colors": [
+    {
+      "title": "white",
+      "rgb": "rgb(255,255,255)",
+      "id": 1
+    },
+    {
+      "title": "Szurke",
+      "color": "#787878",
+      "id": 2
+    },
+    {
+      "title": "red",
+      "color": "#ea1f1f",
+      "id": 3
+    },
+    {
+      "title": "black",
+      "color": "#000000",
+      "id": 4
+    },
+    {
+      "title": "Olive",
+      "color": "#259d2d",
+      "id": 5
+    }
+  ],
+  "designs": [
+    {
+      "title": "Sedan",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

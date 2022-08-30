@@ -1,0 +1,30 @@
+.color-box{
+    width: 200px;
+    height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(32, 32, 32);
+    color: rgba(43, 43, 43, 0.911);
+    font-style: italic;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin: 20px;
+}
+.color-box:hover{
+    box-shadow: 0 2px 5px rgba(68, 68, 68, 0.404);
+    cursor: pointer;
+}
+.colors-container *{
+    margin: 15px 25px;
+    
+}
+.form-container{
+    max-width: 400px;
+    padding: 20px;
+    
+}
+.input-container *{
+    margin: 10px 0;
+    
+}
