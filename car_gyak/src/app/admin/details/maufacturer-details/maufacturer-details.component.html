@@ -1,0 +1,70 @@
+<div>
+  <div class="manufactorers-container">
+    <ng-template [ngIf]="loading">
+      <app-loading-component
+        [width]="'100px'"
+        [height]="'150px'"
+        *ngFor="let loadingComponent of [].constructor(3)"
+      ></app-loading-component>
+    </ng-template>
+
+    <ng-template [ngIf]="!loading">
+      <div
+        *ngFor="let manufactorer of manufacturers"
+        class="manufactorers-card"
+      >
+        <img [src]="manufactorer.iconPath" />
+        <p>{{ manufactorer.title }}</p>
+      </div></ng-template
+    >
+  </div>
+  <div class="form-container">
+    <form [formGroup]="manufacturerForm" (ngSubmit)="onAddManufacturer()">
+      <div class="input-container">
+        <label class="admin-custom-label" for="titleInput">Title*</label>
+        <input
+          class="admin-custom-input"
+          id="titleInput"
+          formControlName="title"
+          type="text"
+          [ngClass]="
+            title.invalid && title.touched
+              ? 'admin-custom-invalid-input'
+              : 'admin-custon-valid-input'
+          "
+        />
+        <div *ngIf="title.invalid && title.touched" class="error-container">
+          <p *ngIf="title.hasError('required')">Ezt a mezot kotelezo megadni</p>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label class="admin-custom-label" for="iconPathInput">iconPath*</label>
+        <input
+          class="admin-custom-input"
+          id="iconPathInput"
+          formControlName="iconPath"
+          type="text"
+          [ngClass]="
+            iconPath.invalid && iconPath.touched
+              ? 'admin-custom-invalid-input'
+              : 'admin-custon-valid-input'
+          "
+        />
+        <div
+          *ngIf="iconPath.invalid && iconPath.touched"
+          class="error-container"
+        >
+          <p *ngIf="iconPath.hasError('required')">
+            Ezt a mezot kotelezo megadni
+          </p>
+        </div>
+      </div>
+      <div class="input-container">
+        <button type="submit" class="admin-custom-button">
+          Add Manufacturer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

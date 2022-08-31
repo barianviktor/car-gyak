@@ -1,0 +1,30 @@
+.colors-container *{
+    margin: 15px 25px;
+    
+}
+.form-container{
+    max-width: 400px;
+    padding: 20px;
+    
+}
+.input-container *{
+    margin: 10px 0;
+    
+}
+.manufactorers-card{
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    border: 1px solid black;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 15px;
+    padding: 10px
+    ;
+}
+.manufactorers-card img{
+    height: 80px;
+}

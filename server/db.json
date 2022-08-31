@@ -1,4 +1,21 @@
 {
+  "manufacturers": [
+    {
+      "title": "Mercedes-Benz",
+      "iconPath": "https://png.monster/wp-content/uploads/2022/02/png.monster-694.png",
+      "id": 1
+    },
+    {
+      "title": "Porche",
+      "iconPath": "https://www.liblogo.com/img-logo/po361pf9a-porsche-logo-porsche-logo-decal.png",
+      "id": 2
+    },
+    {
+      "title": "BMW",
+      "iconPath": "https://toppng.com/uploads/preview/bmw-logo-bmw-logo-high-resolutio-11563319760gtbncaz78b.png",
+      "id": 3
+    }
+  ],
   "colors": [
     {
       "title": "white",
@@ -24,12 +41,21 @@
       "title": "Olive",
       "color": "#259d2d",
       "id": 5
+    },
+    {
+      "title": "Yellow",
+      "color": "#e7ff2e",
+      "id": 6
     }
   ],
   "designs": [
     {
       "title": "Sedan",
       "id": 1
+    },
+    {
+      "title": "Coupé",
+      "id": 2
     }
   ],
   "posts": [

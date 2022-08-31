@@ -10,11 +10,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailsComponent } from './admin/details/details.component';
 import { ColorDetailsComponent } from './admin/details/color-details/color-details.component';
-import { MakerDetailsComponent } from './admin/details/maker-details/maker-details.component';
 import { DesignDetailsComponent } from './admin/details/design-details/design-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponentComponent } from './shared/loading-component/loading-component.component';
+import { MaufacturerDetailsComponent } from './admin/details/maufacturer-details/maufacturer-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +25,9 @@ import { LoadingComponentComponent } from './shared/loading-component/loading-co
     FooterComponent,
     DetailsComponent,
     ColorDetailsComponent,
-    MakerDetailsComponent,
     DesignDetailsComponent,
     LoadingComponentComponent,
+    MaufacturerDetailsComponent,
   ],
   imports: [
     BrowserModule,
