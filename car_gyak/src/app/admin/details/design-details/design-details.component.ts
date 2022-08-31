@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
 import { IDesign } from 'src/app/models/design.interface';
 import { DesignService } from 'src/app/services/design.service';
 
@@ -14,21 +8,23 @@ import { DesignService } from 'src/app/services/design.service';
   styleUrls: ['./design-details.component.scss'],
 })
 export class DesignDetailsComponent implements OnInit {
-  constructor(private fb: FormBuilder, private designService: DesignService) {
-    this.designForm = fb.group({
-      design: ['', [Validators.required, Validators.minLength(3)]],
-    });
-  }
-  get design(): FormControl {
-    return this.designForm.get('design') as FormControl;
-  }
-  designForm: FormGroup;
-  designs?: IDesign[];
-  loading = false;
+  constructor(private designService: DesignService) {}
+
   ngOnInit(): void {
     this.getDesigns();
   }
-  onAddDesign() {
+  designs?: IDesign[];
+  loading = false;
+
+  getDesigns() {
+    this.loading = true;
+    this.designService.designs.subscribe((designs) => {
+      this.loading = false;
+      this.designs = designs;
+      console.log(designs);
+    });
+  }
+  /*   onAddDesign() {
     if (this.designForm.valid) {
       const design: IDesign = {
         title: this.design.value,
@@ -47,5 +43,5 @@ export class DesignDetailsComponent implements OnInit {
       this.loading = false;
       console.log(this.designs);
     });
-  }
+  } */
 }

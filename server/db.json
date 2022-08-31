@@ -1,5 +1,5 @@
 {
-  "manufacturers": [
+  "makers": [
     {
       "title": "Mercedes-Benz",
       "iconPath": "https://png.monster/wp-content/uploads/2022/02/png.monster-694.png",
@@ -46,6 +46,21 @@
       "title": "Yellow",
       "color": "#e7ff2e",
       "id": 6
+    },
+    {
+      "title": "Orange",
+      "color": "#f99e1f",
+      "id": 7
+    },
+    {
+      "title": "Blue",
+      "color": "#328cec",
+      "id": 8
+    },
+    {
+      "title": "Purple",
+      "color": "#8a62f9",
+      "id": 9
     }
   ],
   "designs": [
@@ -56,6 +71,10 @@
     {
       "title": "Coupé",
       "id": 2
+    },
+    {
+      "title": "Hatchback",
+      "id": 3
     }
   ],
   "posts": [

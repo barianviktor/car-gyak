@@ -1,4 +1,4 @@
-export interface IManufacturer {
+export interface IMaker {
   id?: number;
   title: string;
   iconPath: string;

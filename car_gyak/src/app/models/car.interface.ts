@@ -1,12 +1,12 @@
 import { IColor } from './color.interface';
 import { IDesign } from './design.interface';
-import { IManufacturer } from './manufacturer.interface';
+import { IMaker } from './maker.interface';
 import { Motor } from './motor.enum';
 import { Transmission } from './transmission.enum';
 
 export interface ICar {
   id?: string;
-  maker: IManufacturer;
+  maker: IMaker;
   model: string;
   design: IDesign;
   title: string;

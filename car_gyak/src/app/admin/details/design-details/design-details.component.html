@@ -1,47 +1,16 @@
 <h2>Designs Details</h2>
-<div class="colors-container">
-  <ng-template [ngIf]="loading">
-    <app-loading-component
-      [width]="'100px'"
-      [height]="'60px'"
-      *ngFor="let loadingComponent of [].constructor(3)"
-    ></app-loading-component>
-  </ng-template>
+<ng-template [ngIf]="loading">
+  <app-loading-component
+    [width]="'100px'"
+    [height]="'60px'"
+    *ngFor="let loadingComponent of [].constructor(3)"
+  ></app-loading-component>
+</ng-template>
 
-  <ng-template [ngIf]="!loading">
-    <div class="design-item" *ngFor="let design of designs">
-      {{ design.title }}
-    </div></ng-template
-  >
-  <div class="form-container">
-    <form [formGroup]="designForm" (ngSubmit)="onAddDesign()">
-      <div class="input-container">
-        <label class="admin-custom-label" for="designInput">Design*</label>
-        <input
-          class="admin-custom-input"
-          id="designInput"
-          formControlName="design"
-          type="text"
-          [ngClass]="
-            design.invalid && design.touched
-              ? 'admin-custom-invalid-input'
-              : 'admin-custon-valid-input'
-          "
-        />
-        <div *ngIf="design.invalid && design.touched" class="error-container">
-          <p *ngIf="design.hasError('required')">
-            Ezt a mezot kotelezo megadni
-          </p>
-          <p *ngIf="design.hasError('minlength')">
-            Ennek a mezonek legalabb
-            {{ design.getError("minlength").requiredLength }} karakter hosszunak
-            kellene lennie
-          </p>
-        </div>
-      </div>
-      <div class="input-container">
-        <button type="submit" class="admin-custom-button">Add Color</button>
-      </div>
-    </form>
-  </div>
-</div>
+<ng-template [ngIf]="!loading">
+  <div class="design-item" *ngFor="let design of designs">
+    {{ design.title }}
+  </div></ng-template
+>
+
+<app-design-details-form></app-design-details-form>

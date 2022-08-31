@@ -2,17 +2,25 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IColor } from '../models/color.interface';
 import { environment } from 'src/environments/environment';
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
 export class ColorService {
-  constructor(private http: HttpClient) {}
+  colors = new Subject<IColor[]>();
+  constructor(private http: HttpClient) {
+    this.getColors();
+  }
 
   getColors() {
-    return this.http.get<IColor[]>(environment.api + 'colors');
+    this.http.get<IColor[]>(environment.api + 'colors').subscribe((colors) => {
+      this.colors.next(colors);
+    });
   }
 
   addColor(color: IColor) {
-    return this.http.post(environment.api + 'colors', color);
+    this.http.post(environment.api + 'colors', color).subscribe((x) => {
+      this.getColors();
+    });
   }
 }

@@ -1,0 +1,29 @@
+<div class="form-container">
+  <form [formGroup]="designForm" (ngSubmit)="onAddDesign()">
+    <div class="input-container">
+      <label class="admin-custom-label" for="designInput">Design*</label>
+      <input
+        class="admin-custom-input"
+        id="designInput"
+        formControlName="design"
+        type="text"
+        [ngClass]="
+          design.invalid && design.touched
+            ? 'admin-custom-invalid-input'
+            : 'admin-custon-valid-input'
+        "
+      />
+      <div *ngIf="design.invalid && design.touched" class="error-container">
+        <p *ngIf="design.hasError('required')">Ezt a mezot kotelezo megadni</p>
+        <p *ngIf="design.hasError('minlength')">
+          Ennek a mezonek legalabb
+          {{ design.getError("minlength").requiredLength }} karakter hosszunak
+          kellene lennie
+        </p>
+      </div>
+    </div>
+    <div class="input-container">
+      <button type="submit" class="admin-custom-button">Add Design</button>
+    </div>
+  </form>
+</div>

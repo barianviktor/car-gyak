@@ -4,8 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CarComponent } from './admin/car/car.component';
-import { NewCarComponent } from './admin/new-car/new-car.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { DetailsComponent } from './admin/details/details.component';
@@ -14,20 +12,24 @@ import { DesignDetailsComponent } from './admin/details/design-details/design-de
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoadingComponentComponent } from './shared/loading-component/loading-component.component';
-import { MaufacturerDetailsComponent } from './admin/details/maufacturer-details/maufacturer-details.component';
+import { MakerDetailsComponent } from './admin/details/maker-details/maker-details.component';
+import { ColorDetailsFormComponent } from './admin/details/color-details/color-details-form/color-details-form.component';
+import { DesignDetailsFormComponent } from './admin/details/design-details/design-details-form/design-details-form.component';
+import { MakerDetailsFormComponent } from './admin/details/maker-details/maker-details-form/maker-details-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NewCarComponent,
     HomeComponent,
-    CarComponent,
     HeaderComponent,
     FooterComponent,
     DetailsComponent,
     ColorDetailsComponent,
     DesignDetailsComponent,
     LoadingComponentComponent,
-    MaufacturerDetailsComponent,
+    MakerDetailsComponent,
+    ColorDetailsFormComponent,
+    DesignDetailsFormComponent,
+    MakerDetailsFormComponent,
   ],
   imports: [
     BrowserModule,

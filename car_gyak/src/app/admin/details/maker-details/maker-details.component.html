@@ -1,0 +1,19 @@
+<div>
+  <div class="maker-container">
+    <ng-template [ngIf]="loading">
+      <app-loading-component
+        [width]="'100px'"
+        [height]="'150px'"
+        *ngFor="let loadingComponent of [].constructor(3)"
+      ></app-loading-component>
+    </ng-template>
+
+    <ng-template [ngIf]="!loading">
+      <div *ngFor="let maker of makers" class="maker-card">
+        <img [src]="maker.iconPath" />
+        <p>{{ maker.title }}</p>
+      </div></ng-template
+    >
+  </div>
+  <app-maker-details-form></app-maker-details-form>
+</div>
