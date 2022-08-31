@@ -1,5 +1,8 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarComponent } from './admin/car/car.component';
+import { NewCarComponent } from './admin/car/new-car/new-car.component';
 import { DetailsComponent } from './admin/details/details.component';
 import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
@@ -11,7 +14,7 @@ const routes: Routes = [
   {
     path: 'admin',
     children: [
-      /* {
+      {
         path: 'cars',
         children: [
           {
@@ -21,7 +24,7 @@ const routes: Routes = [
           },
           {
             path: 'new',
-            component: CarComponent,
+            component: NewCarComponent,
             pathMatch: 'full',
           },
           {
@@ -29,21 +32,17 @@ const routes: Routes = [
             component: CarComponent,
           },
         ],
-      }, */
+      },
       {
         path: 'details',
         component: DetailsComponent,
       },
     ],
   },
-  {
-    path: '**',
-    redirectTo: '/',
-  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), CommonModule],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

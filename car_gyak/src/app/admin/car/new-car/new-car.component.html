@@ -1,0 +1,23 @@
+<select>
+  <option *ngFor="let motor of motors" [value]="motor">{{ motor }}</option>
+</select>
+<select>
+  <option *ngFor="let transmission of transmissions" [value]="transmission">
+    {{ transmission }}
+  </option>
+</select>
+<form (ngSubmit)="onSubmit()" [formGroup]="carForm">
+  <div formControlName="maker">
+    <div
+      (click)="selectMaker(maker)"
+      class="maker-card"
+      *ngFor="let maker of makers"
+    >
+      <p>{{ maker.title }}</p>
+      <img [src]="maker.iconPath" />
+    </div>
+  </div>
+  <input formControlName="model" type="text" />
+
+  <button type="submit">submit</button>
+</form>

@@ -16,6 +16,8 @@ import { MakerDetailsComponent } from './admin/details/maker-details/maker-detai
 import { ColorDetailsFormComponent } from './admin/details/color-details/color-details-form/color-details-form.component';
 import { DesignDetailsFormComponent } from './admin/details/design-details/design-details-form/design-details-form.component';
 import { MakerDetailsFormComponent } from './admin/details/maker-details/maker-details-form/maker-details-form.component';
+import { CarComponent } from './admin/car/car.component';
+import { NewCarComponent } from './admin/car/new-car/new-car.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,8 @@ import { MakerDetailsFormComponent } from './admin/details/maker-details/maker-d
     ColorDetailsFormComponent,
     DesignDetailsFormComponent,
     MakerDetailsFormComponent,
+    CarComponent,
+    NewCarComponent,
   ],
   imports: [
     BrowserModule,
